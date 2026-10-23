@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#171923">
+  <meta name="description" content="Official information, Terms of Service, and Privacy Policy for Raccoon, a Discord server companion by Anonymous Devs.">
+  <title>Raccoon | Anonymous Devs</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #101116;
+      --panel: #191b24;
+      --panel-2: #20232e;
+      --text: #f4f5f7;
+      --muted: #a7adbb;
+      --accent: #a78bfa;
+      --accent-2: #7c5ce7;
+      --border: rgba(255,255,255,.10);
+      --radius: 20px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 90px; }
+    body {
+      margin: 0; background:
+        radial-gradient(ellipse at 12% 0%, rgba(124,92,231,.16), transparent 35%),
+        radial-gradient(ellipse at 90% 20%, rgba(167,139,250,.09), transparent 30%),
+        var(--bg);
+      color: var(--text); font: 16px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { width: min(1080px, calc(100% - 36px)); margin: 0 auto; }
+    header {
+      position: sticky; top: 0; z-index: 10; backdrop-filter: blur(16px);
+      background: rgba(16,17,22,.82); border-bottom: 1px solid var(--border);
+    }
+    .nav { min-height: 72px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; color: var(--text); font-weight: 800; letter-spacing: -.03em; }
+    .brand-mark {
+      width: 42px; height: 42px; display: grid; place-items: center; border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent-2), #41317b); color: white; font-size: 21px;
+      box-shadow: 0 8px 28px rgba(124,92,231,.25);
+    }
+    nav { display: flex; flex-wrap: wrap; gap: 18px; font-size: 14px; }
+    nav a { color: var(--muted); }
+    .hero { padding: 86px 0 58px; text-align: center; }
+    .eyebrow {
+      display: inline-flex; gap: 8px; align-items: center; padding: 6px 12px;
+      border: 1px solid var(--border); border-radius: 999px; color: var(--accent);
+      background: rgba(167,139,250,.07); font-size: 13px; font-weight: 700;
+    }
+    h1 { margin: 20px 0 12px; font-size: clamp(42px, 7vw, 76px); line-height: 1.04; letter-spacing: -.06em; }
+    .gradient { background: linear-gradient(90deg, #c4b5fd, #a78bfa, #e9d5ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .hero p { max-width: 680px; margin: 0 auto; color: var(--muted); font-size: clamp(16px, 2vw, 19px); }
+    .hero-actions { margin-top: 28px; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; padding: 11px 18px; border-radius: 12px; font-weight: 750; border: 1px solid var(--border); }
+    .btn.primary { background: var(--accent-2); color: white; border-color: transparent; }
+    .btn.secondary { background: rgba(255,255,255,.04); color: var(--text); }
+    main { padding-bottom: 70px; }
+    .section-heading { margin: 0 0 8px; font-size: 28px; letter-spacing: -.035em; }
+    .section-intro { color: var(--muted); margin: 0 0 24px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 18px; }
+    .card {
+      background: linear-gradient(145deg, rgba(32,35,46,.95), rgba(25,27,36,.95));
+      border: 1px solid var(--border); border-radius: var(--radius); padding: 26px;
+      box-shadow: 0 18px 55px rgba(0,0,0,.12);
+    }
+    .card .num { color: var(--accent); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+    h2 { margin: 8px 0 10px; font-size: 23px; letter-spacing: -.03em; }
+    h3 { margin: 22px 0 6px; font-size: 17px; }
+    p, li { color: #c7cad4; }
+    ul { padding-left: 21px; }
+    li + li { margin-top: 6px; }
+    .notice { margin-top: 18px; padding: 14px 16px; background: rgba(167,139,250,.08); border: 1px solid rgba(167,139,250,.2); border-radius: 12px; color: #d9d1f7; font-size: 14px; }
+    .legal { margin-top: 20px; }
+    .legal .card { margin-bottom: 18px; }
+    .updated { color: var(--muted); font-size: 13px; }
+    .code {
+      display: block; padding: 12px 14px; border-radius: 10px; background: #101116;
+      border: 1px solid var(--border); color: #ddd6fe; overflow-wrap: anywhere; font: 13px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+    footer { border-top: 1px solid var(--border); padding: 28px 0 38px; color: var(--muted); font-size: 14px; }
+    .footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
+    @media (max-width: 700px) {
+      .nav { padding: 12px 0; align-items: flex-start; flex-direction: column; gap: 10px; }
+      nav { gap: 13px; }
+      .hero { padding-top: 60px; }
+      .grid { grid-template-columns: 1fr; }
+      .card { padding: 21px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#top" aria-label="Raccoon home">
+        <span class="brand-mark">R</span>
+        <span>Raccoon <span style="color:var(--muted);font-weight:500">by Anonymous Devs</span></span>
+      </a>
+      <nav aria-label="Main navigation">
+        <a href="#overview">Overview</a>
+        <a href="#endpoints">Endpoints</a>
+        <a href="#terms">Terms</a>
+        <a href="#privacy">Privacy</a>
+      </nav>
+    </div>
+  </header>
+
+  <div id="top" class="wrap">
+    <section class="hero">
+      <span class="eyebrow">● Discord Server Companion</span>
+      <h1>Meet <span class="gradient">Raccoon.</span></h1>
+      <p>PC-level controls, right in your pocket. Raccoon is a Discord server companion built by <strong>Anonymous Devs</strong> to help communities manage and customize their servers.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#terms">Read Terms of Service</a>
+        <a class="btn secondary" href="#privacy">Read Privacy Policy</a>
+      </div>
+    </section>
+
+    <main>
+      <section id="overview">
+        <h2 class="section-heading">Application information</h2>
+        <p class="section-intro">The four application information items in one place. Legal documents are below; technical endpoints are only needed if you implement those features.</p>
+        <div class="grid">
+          <article class="card">
+            <div class="num">01 / Technical endpoint</div>
+            <h2>Interactions Endpoint URL</h2>
+            <p>This URL is used only if Raccoon receives Discord interactions through HTTP instead of using a bot connected to the Discord Gateway.</p>
+            <span class="code">Leave blank for a standard discord.py / Gateway bot.</span>
+          </article>
+          <article class="card">
+            <div class="num">02 / Technical endpoint</div>
+            <h2>Linked Roles Verification URL</h2>
+            <p>This URL is needed only if Raccoon implements Discord Linked Roles and verifies a user's eligibility for a role.</p>
+            <span class="code">Leave blank unless Linked Roles verification is implemented.</span>
+          </article>
+          <article class="card">
+            <div class="num">03 / Legal document</div>
+            <h2>Terms of Service</h2>
+            <p>These terms explain acceptable use, service availability, enforcement, and user responsibilities when using Raccoon.</p>
+            <a href="#terms">Read Terms of Service →</a>
+          </article>
+          <article class="card">
+            <div class="num">04 / Legal document</div>
+            <h2>Privacy Policy</h2>
+            <p>This policy describes the types of information Raccoon may process, why it is used, and how users can ask questions about their data.</p>
+            <a href="#privacy">Read Privacy Policy →</a>
+          </article>
+        </div>
+        <div class="notice"><strong>Before publishing:</strong> Review and edit these legal documents so they accurately describe the data Raccoon actually stores and the features it actually provides. Do not claim that data is never stored unless that is true.</div>
+      </section>
+
+      <section id="endpoints" class="legal">
+        <article class="card">
+          <div class="num">Technical setup</div>
+          <h2>How to use the endpoint fields</h2>
+          <p><strong>Interactions Endpoint URL:</strong> If your bot uses the normal Discord Gateway connection, keep this field empty. Do not enter this website's URL there; this page is not an interaction handler.</p>
+          <p><strong>Linked Roles Verification URL:</strong> Keep this empty until you build a real verification endpoint for Linked Roles. A normal Terms or Privacy page cannot perform verification.</p>
+        </article>
+      </section>
+
+      <section id="terms" class="legal">
+        <article class="card">
+          <div class="num">03 / Legal document</div>
+          <h2>Terms of Service</h2>
+          <p class="updated">For Raccoon • Maintained by Anonymous Devs</p>
+          <p>By inviting, configuring, or using Raccoon (“the Bot”), you agree to these Terms of Service. If you do not agree, do not use the Bot.</p>
+          <h3>1. Acceptable use</h3>
+          <p>You must use Raccoon lawfully and in accordance with Discord's Terms of Service, Community Guidelines, and applicable policies. Do not use the Bot to harass others, spam, exploit vulnerabilities, or violate another person's rights.</p>
+          <h3>2. Server permissions and responsibility</h3>
+          <p>Server owners and administrators are responsible for the permissions they grant Raccoon, the commands they configure, and how moderation features are used. Grant only the permissions required for the features you want to use.</p>
+          <h3>3. Availability and changes</h3>
+          <p>Raccoon is provided on an “as available” basis. Features may change, be interrupted, or be discontinued. Anonymous Devs will make reasonable efforts to maintain the Bot but does not guarantee uninterrupted service or error-free operation.</p>
+          <h3>4. Abuse and access restrictions</h3>
+          <p>Access may be restricted if the Bot is abused, used to break these terms, or creates security or operational risks. Server administrators remain responsible for their own server rules and moderation decisions.</p>
+          <h3>5. Disclaimer and limitation</h3>
+          <p>To the extent permitted by applicable law, the Bot is provided without warranties of any kind. Anonymous Devs is not responsible for actions taken by server members or administrators using the Bot, or for service interruptions outside its reasonable control.</p>
+          <h3>6. Changes to these terms</h3>
+          <p>These terms may be updated as the Bot changes. The latest version will be published on this page. Continued use after an update means you accept the revised terms.</p>
+          <h3>7. Contact</h3>
+          <p>For questions about these terms, contact the Anonymous Devs team through the official support server or the contact method published alongside Raccoon. Add your actual support link before publishing this page.</p>
+        </article>
+      </section>
+
+      <section id="privacy" class="legal">
+        <article class="card">
+          <div class="num">04 / Legal document</div>
+          <h2>Privacy Policy</h2>
+          <p class="updated">For Raccoon • Maintained by Anonymous Devs</p>
+          <p>This Privacy Policy explains how Raccoon may process information when it is used on Discord. Update this policy to match the Bot's actual code, database, logs, and hosting setup before publishing.</p>
+          <h3>1. Information the Bot may process</h3>
+          <p>Depending on enabled features and server configuration, Raccoon may process Discord user IDs, server IDs, channel IDs, message or command content submitted to a command, moderation actions, configuration settings, and reminder or preference data. The Bot may also receive technical information needed to operate and troubleshoot the service.</p>
+          <h3>2. How information is used</h3>
+          <p>Information may be used to respond to commands, provide server-management features, apply server settings, maintain premium or access controls, prevent abuse, troubleshoot errors, and keep the Bot secure.</p>
+          <h3>3. Storage and retention</h3>
+          <p>Retention depends on the features enabled and the Bot's implementation. Data may be held in a database, configuration file, or operational logs. Before publishing, specify the real storage provider, retention period, and deletion process used by your deployment.</p>
+          <h3>4. Sharing</h3>
+          <p>Anonymous Devs should not sell personal information. Information may be processed by hosting, database, or infrastructure providers required to operate the Bot, or disclosed when required by law. Only describe practices that match your actual setup.</p>
+          <h3>5. Security</h3>
+          <p>Reasonable measures should be used to protect stored information. No online service can guarantee absolute security, so avoid sharing passwords, tokens, or other secrets with the Bot or its support team.</p>
+          <h3>6. Your choices and data requests</h3>
+          <p>For questions or requests concerning information associated with your Discord account or server, contact Anonymous Devs through the official support server or published contact method. Add a working contact or support link before publishing. Requests may require enough information to identify the relevant server or data without exposing your account credentials.</p>
+          <h3>7. Children's privacy</h3>
+          <p>Raccoon is a Discord community tool and is not intended to bypass Discord's age requirements or applicable child privacy laws.</p>
+          <h3>8. Policy updates</h3>
+          <p>This policy may be updated when the Bot's features or data practices change. The current version will be published on this page.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>© <span id="year">2026</span> Anonymous Devs. Raccoon is a community project.</span>
+      <span><a href="#terms">Terms</a> · <a href="#privacy">Privacy</a> · <a href="#top">Back to top ↑</a></span>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
