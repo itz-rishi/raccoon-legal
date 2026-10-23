@@ -1,24 +1,1557 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#10130f">
-<meta name="description" content="Official Raccoon Discord bot information, Terms of Service, Privacy Policy, and Discord application endpoint guidance by Anonymous Devs.">
-<title>Raccoon — Anonymous Devs</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050605">
+<meta name="description" content="Meet Raccoon, your Discord server companion by Anonymous Devs. Server management, moderation, automation and customization.">
+<title>Raccoon® | Your Server. Your Rules.</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-:root{--bg:#030403;--panel:#0b0d0b;--panel2:#111411;--text:#f7f8f7;--muted:#9a9f9a;--line:rgba(255,255,255,.12);--lime:#54ff00;--lime2:#38c900;--red:#ed4245;--r:22px}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:radial-gradient(ellipse at 50% 0%,rgba(84,255,0,.10),transparent 36%),radial-gradient(ellipse at 0% 55%,rgba(84,255,0,.035),transparent 30%),var(--bg);color:var(--text);font:16px/1.75 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:var(--lime);text-decoration:none}a:hover{color:#b8ff9c}button,a{transition:transform .22s ease,color .22s ease,border-color .22s ease,background .22s ease}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}header{position:sticky;top:0;z-index:20;background:rgba(12,15,12,.78);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;color:var(--text);font-weight:850;letter-spacing:-.04em}.brand-logo{width:136px;height:auto;display:block;object-fit:contain}.brand-caption{color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;border-left:1px solid var(--line);padding-left:12px}nav{display:flex;align-items:center;gap:20px;font-size:13px}nav a{color:var(--muted)}nav a:hover{color:var(--text)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 16px;border:1px solid var(--line);border-radius:13px;font-weight:750;font-size:13px}.nav-cta,.primary{background:var(--lime);border-color:var(--lime);color:#10140d}.nav-cta:hover,.primary:hover{background:#b8ff9c;color:#10140d;transform:translateY(-2px)}.hero{padding:86px 0 78px;position:relative;overflow:hidden;text-align:center}.hero-logo-wrap{display:flex;justify-content:center;align-items:center;margin:38px auto 28px;position:relative}.hero-logo-wrap:before{content:"";position:absolute;width:min(620px,80vw);height:160px;background:#54ff0010;filter:blur(70px);border-radius:50%;pointer-events:none}.hero-logo{position:relative;width:min(680px,92%);height:auto;display:block;filter:drop-shadow(0 0 22px #54ff0012)}.hero-heading{font-size:clamp(34px,5.8vw,64px);line-height:1.08;letter-spacing:-.065em;margin:18px 0 20px}.orb{position:absolute;width:300px;height:300px;border-radius:50%;filter:blur(70px);background:#54ff0010;pointer-events:none;animation:float 8s ease-in-out infinite}.orb.one{left:5%;top:30px}.orb.two{right:4%;bottom:0;animation-delay:-4s}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #54ff0040;background:#54ff000d;color:var(--lime);border-radius:99px;padding:7px 13px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:800}.dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 13px var(--lime)}h1{font-size:clamp(52px,8vw,94px);line-height:1.02;letter-spacing:-.075em;margin:24px 0 20px;font-weight:900}.gradient{color:var(--lime);text-shadow:0 0 40px #54ff0017}.hero p{max-width:680px;margin:0 auto;color:var(--muted);font-size:clamp(16px,2vw,19px)}.actions{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}.secondary{color:var(--text);background:#ffffff05}.secondary:hover{border-color:#54ff0070;transform:translateY(-2px)}.micro{font-size:12px;color:#7f897b;margin-top:20px}.section{padding:54px 0}.section-head{max-width:720px;margin-bottom:24px}.kicker{color:var(--lime);font-size:11px;font-weight:850;letter-spacing:.15em;text-transform:uppercase}.section h2{font-size:clamp(28px,4vw,43px);line-height:1.13;letter-spacing:-.05em;margin:8px 0 10px}.intro{color:var(--muted);margin:0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{position:relative;background:linear-gradient(145deg,#171d17e8,#111511e8);border:1px solid var(--line);border-radius:var(--r);padding:26px;overflow:hidden;transition:transform .25s ease,border-color .25s ease,background .25s ease}.card:hover{transform:translateY(-4px);border-color:#54ff0055;background:linear-gradient(145deg,#1a2119,#121712)}.card:before{content:"";position:absolute;inset:0 auto auto 0;width:100%;height:1px;background:linear-gradient(90deg,transparent,#54ff0040,transparent)}.num{font:750 11px/1.4 ui-monospace,monospace;letter-spacing:.12em;color:var(--lime);text-transform:uppercase}.card h3{font-size:22px;letter-spacing:-.035em;margin:13px 0 8px}.card p{color:var(--muted);margin:0 0 14px}.pill{display:inline-block;border:1px solid var(--line);border-radius:8px;background:#05070555;padding:9px 11px;color:#d5e1d0;font-size:12px;font-family:ui-monospace,monospace;overflow-wrap:anywhere}.note{margin-top:18px;padding:16px 18px;border-radius:15px;background:#54ff000b;border:1px solid #54ff0026;color:var(--muted);font-size:13px}.note strong{color:var(--lime)}.legal{margin-top:18px}.legal .card{padding:clamp(22px,4vw,38px)}.updated{font-size:12px;color:#7f897b;margin:0 0 18px}.legal h3{font-size:16px;margin:25px 0 6px;color:#e8f2e2}.legal p,.legal li{color:#aeb8aa}.legal ul{padding-left:22px}.legal .card>p:first-of-type{color:#d0d8cb}.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.contact{padding:21px;border:1px solid var(--line);border-radius:18px;background:#ffffff04}.contact strong{display:block;margin-bottom:7px}.contact span{display:block;color:var(--muted);font-size:13px;overflow-wrap:anywhere}.contact a{display:inline-block;margin-top:12px;font-size:13px;font-weight:800}footer{border-top:1px solid var(--line);margin-top:50px;padding:28px 0 40px;color:#7f897b;font-size:12px}.foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.foot a{color:#a4aea0;margin-left:12px}.reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:translateY(0)}@keyframes float{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-22px) scale(1.08)}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}@media(max-width:760px){.brand-logo{width:115px}.brand-caption{font-size:9px}.nav{height:auto;min-height:70px;flex-wrap:wrap;padding:12px 0}.nav nav{order:3;width:100%;justify-content:space-between;gap:10px;padding:4px 0 8px}.nav-cta{margin-left:auto}.hero{padding:70px 0 55px}.grid,.contact-grid{grid-template-columns:1fr}.section{padding:36px 0}.card{padding:22px}}@media(max-width:400px){.wrap{width:calc(100% - 24px)}nav{font-size:12px}.nav-cta{padding:9px 11px}}
+:root {
+  --bg: #050605;
+  --surface: #0b0d0b;
+  --surface2: #101310;
+  --green: #65ff38;
+  --green-soft: #a2ff88;
+  --white: #f5f7f4;
+  --muted: #8b9389;
+  --line: rgba(255,255,255,.09);
+  --glow: rgba(101,255,56,.13);
+  --radius: 22px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 95px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: "DM Sans", sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 52px 52px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: rgba(67,255,25,.055);
+  filter: blur(120px);
+  top: -300px;
+  left: calc(50% - 250px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font: inherit; }
+img { display: block; max-width: 100%; }
+::selection { background: var(--green); color: #061005; }
+
+.container {
+  width: min(1160px, calc(100% - 44px));
+  margin: auto;
+}
+
+.green { color: var(--green); }
+.muted { color: var(--muted); }
+
+.announcement {
+  padding: 9px 16px;
+  text-align: center;
+  font-size: 11px;
+  letter-spacing: .09em;
+  text-transform: uppercase;
+  color: #c9d2c5;
+  border-bottom: 1px solid var(--line);
+  background: #080a08;
+}
+
+.announcement span { color: var(--green); font-weight: 800; }
+
+/* Navigation */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(5,6,5,.83);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.brand img {
+  width: 132px;
+  max-height: 48px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.brand-divider {
+  height: 30px;
+  width: 1px;
+  background: var(--line);
+}
+
+.brand-by {
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .13em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.brand-by strong {
+  display: block;
+  color: #dbe3d8;
+  font-size: 11px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.nav-links a {
+  font-size: 12px;
+  font-weight: 600;
+  color: #a4aca1;
+  transition: color .2s;
+}
+
+.nav-links a:hover { color: var(--green); }
+
+.btn {
+  min-height: 46px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 19px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 800;
+  transition: .25s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--green);
+  color: #061005;
+  border-color: var(--green);
+  box-shadow: 0 0 28px rgba(101,255,56,.10);
+}
+
+.btn-primary:hover {
+  background: #a1ff86;
+  transform: translateY(-3px);
+  box-shadow: 0 0 34px rgba(101,255,56,.22);
+}
+
+.btn-outline {
+  color: var(--white);
+  background: rgba(255,255,255,.025);
+}
+
+.btn-outline:hover {
+  border-color: rgba(101,255,56,.5);
+  background: rgba(101,255,56,.055);
+  transform: translateY(-3px);
+}
+
+.menu-toggle {
+  display: none;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  width: 43px;
+  height: 43px;
+  font-size: 22px;
+}
+
+/* Hero */
+
+.hero {
+  position: relative;
+  padding: 100px 0 80px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-glow {
+  position: absolute;
+  width: 620px;
+  height: 360px;
+  border-radius: 50%;
+  background: rgba(72,255,40,.09);
+  filter: blur(100px);
+  left: calc(50% - 310px);
+  top: 100px;
+  pointer-events: none;
+  animation: breathe 7s ease-in-out infinite;
+}
+
+.hero-content { position: relative; z-index: 1; }
+
+.status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: 1px solid rgba(101,255,56,.22);
+  background: rgba(101,255,56,.055);
+  border-radius: 99px;
+  padding: 8px 14px;
+  color: #d6edce;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .035em;
+}
+
+.status-dot {
+  height: 7px;
+  width: 7px;
+  border-radius: 50%;
+  background: var(--green);
+  box-shadow: 0 0 12px var(--green);
+  animation: blink 2s infinite;
+}
+
+.hero-logo {
+  width: min(670px, 92%);
+  max-height: 235px;
+  object-fit: contain;
+  margin: 40px auto 30px;
+  filter: drop-shadow(0 0 35px rgba(101,255,56,.08));
+  animation: logo-enter 1s ease both;
+}
+
+.hero h1 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(43px, 7.2vw, 86px);
+  line-height: 1.02;
+  letter-spacing: -.075em;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.hero h1 .second-line {
+  display: block;
+  color: var(--green);
+  text-shadow: 0 0 40px rgba(101,255,56,.12);
+}
+
+.hero-description {
+  max-width: 610px;
+  margin: auto;
+  font-size: 16px;
+  line-height: 1.9;
+  color: #9ca59a;
+}
+
+.hero-description strong { color: #e9eee7; }
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.hero-note {
+  margin-top: 27px;
+  color: #697267;
+  font-size: 11px;
+}
+
+.hero-note span { color: var(--green); }
+
+/* Stats strip */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--line);
+  background: linear-gradient(110deg, #0c0f0c, #080a08);
+  border-radius: 18px;
+  margin-top: 30px;
+  overflow: hidden;
+}
+
+.stat {
+  padding: 23px 15px;
+  text-align: center;
+}
+
+.stat + .stat { border-left: 1px solid var(--line); }
+
+.stat strong {
+  display: block;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  color: var(--white);
+}
+
+.stat span {
+  font-size: 10px;
+  color: var(--muted);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+/* Shared sections */
+
+.section { padding: 95px 0; }
+
+.section-head {
+  max-width: 690px;
+  margin-bottom: 38px;
+}
+
+.kicker {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--green);
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.kicker::before {
+  content: "";
+  width: 23px;
+  height: 1px;
+  background: var(--green);
+}
+
+.section h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(32px, 4.6vw, 53px);
+  line-height: 1.12;
+  letter-spacing: -.055em;
+  margin-bottom: 16px;
+}
+
+.section-head p {
+  color: var(--muted);
+  font-size: 14px;
+  max-width: 590px;
+}
+
+/* Features */
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.feature-card {
+  position: relative;
+  padding: 30px;
+  min-height: 230px;
+  overflow: hidden;
+  background: linear-gradient(145deg, #101310, #090b09);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  transition: .3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(101,255,56,.3);
+  background: linear-gradient(145deg, #141a12, #0a0c0a);
+}
+
+.feature-card::after {
+  content: "";
+  position: absolute;
+  width: 170px;
+  height: 170px;
+  right: -90px;
+  bottom: -100px;
+  border-radius: 50%;
+  background: var(--glow);
+  filter: blur(30px);
+  transition: .3s;
+}
+
+.feature-card:hover::after { background: rgba(101,255,56,.23); }
+
+.feature-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 27px;
+}
+
+.feature-icon {
+  display: grid;
+  place-items: center;
+  width: 45px;
+  height: 45px;
+  border: 1px solid rgba(101,255,56,.23);
+  background: rgba(101,255,56,.07);
+  color: var(--green);
+  border-radius: 13px;
+  font-size: 21px;
+}
+
+.feature-number {
+  color: #525b50;
+  font: 11px "Space Grotesk", sans-serif;
+  letter-spacing: .12em;
+}
+
+.feature-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 21px;
+  letter-spacing: -.035em;
+  margin-bottom: 8px;
+}
+
+.feature-card p {
+  max-width: 440px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+.feature-label {
+  display: inline-block;
+  margin-top: 19px;
+  color: #c1cabe;
+  font-size: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255,255,255,.02);
+  padding: 5px 9px;
+  border-radius: 6px;
+}
+
+/* Highlight banner */
+
+.highlight {
+  position: relative;
+  padding: 42px;
+  border-radius: 24px;
+  border: 1px solid rgba(101,255,56,.21);
+  background:
+    radial-gradient(ellipse at 90% 10%, rgba(101,255,56,.11), transparent 40%),
+    linear-gradient(120deg, #101410, #080a08);
+  overflow: hidden;
+}
+
+.highlight h2 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(29px, 4vw, 43px);
+  line-height: 1.15;
+  letter-spacing: -.05em;
+  margin: 12px 0;
+  max-width: 650px;
+}
+
+.highlight p {
+  max-width: 600px;
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 24px;
+}
+
+.highlight .tag {
+  font-size: 10px;
+  letter-spacing: .13em;
+  color: var(--green);
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Application information */
+
+.application-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+}
+
+.info-card {
+  border: 1px solid var(--line);
+  background: var(--surface);
+  border-radius: 18px;
+  padding: 26px;
+  transition: .25s;
+}
+
+.info-card:hover { border-color: rgba(101,255,56,.25); }
+
+.info-card .index {
+  color: var(--green);
+  font: 11px "Space Grotesk", sans-serif;
+  letter-spacing: .1em;
+}
+
+.info-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 19px;
+  margin: 14px 0 9px;
+  letter-spacing: -.03em;
+}
+
+.info-card p {
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+  margin-bottom: 18px;
+}
+
+.info-status {
+  display: inline-block;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  padding: 7px 10px;
+  font: 10px "DM Sans", sans-serif;
+  color: #c1cbbd;
+  background: #050605;
+}
+
+.info-card a.text-link {
+  color: var(--green);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.notice {
+  margin-top: 18px;
+  padding: 17px 20px;
+  border-radius: 13px;
+  background: rgba(101,255,56,.045);
+  border: 1px solid rgba(101,255,56,.14);
+  color: #a7b1a2;
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+.notice strong { color: var(--green); }
+
+/* Legal sections */
+
+.legal-wrap {
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  overflow: hidden;
+  background: linear-gradient(150deg, #0c0f0c, #080a08);
+}
+
+.legal-content { padding: clamp(23px, 5vw, 44px); }
+
+.legal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.legal-meta span {
+  font-size: 10px;
+  color: #b2bbae;
+  border: 1px solid var(--line);
+  padding: 6px 10px;
+  border-radius: 7px;
+}
+
+.legal-content .legal-intro {
+  font-size: 14px;
+  color: #d1d9ce;
+  margin-bottom: 28px;
+}
+
+.legal-content h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 16px;
+  color: #e6eee2;
+  margin: 25px 0 8px;
+}
+
+.legal-content p,
+.legal-content li {
+  font-size: 12px;
+  color: #9ca69a;
+  line-height: 2;
+}
+
+.legal-content ul { padding-left: 21px; }
+
+.legal-content li { padding-left: 4px; }
+
+.legal-content .legal-contact {
+  margin-top: 25px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+/* FAQ */
+
+.faq-list {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-item {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 20px 22px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.faq-item summary::-webkit-details-marker { display: none; }
+
+.faq-item summary::after {
+  content: "+";
+  color: var(--green);
+  font-size: 21px;
+  font-weight: 400;
+}
+
+.faq-item[open] summary::after { content: "−"; }
+
+.faq-answer {
+  padding: 0 22px 21px;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* Contact */
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.contact-card {
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 17px;
+  background: var(--surface);
+  transition: .25s;
+}
+
+.contact-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(101,255,56,.28);
+}
+
+.contact-card .contact-icon {
+  color: var(--green);
+  font-size: 22px;
+  margin-bottom: 18px;
+}
+
+.contact-card h3 {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
+  margin-bottom: 7px;
+}
+
+.contact-card p {
+  font-size: 12px;
+  color: var(--muted);
+  min-height: 42px;
+  margin-bottom: 17px;
+}
+
+.contact-card a {
+  color: var(--green);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* Footer */
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 35px 0 25px;
+  background: #070807;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 28px;
+  padding-bottom: 28px;
+}
+
+.footer-brand img {
+  width: 145px;
+  max-height: 55px;
+  object-fit: contain;
+  object-position: left center;
+  margin-bottom: 12px;
+}
+
+.footer-brand p {
+  color: var(--muted);
+  font-size: 11px;
+  max-width: 300px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.footer-links a {
+  color: #9aa395;
+  font-size: 11px;
+}
+
+.footer-links a:hover { color: var(--green); }
+
+.footer-bottom {
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  color: #687064;
+  font-size: 10px;
+}
+
+/* Scroll reveal */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .65s ease, transform .65s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: .35; }
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: .7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.12); }
+}
+
+@keyframes logo-enter {
+  from { opacity: 0; transform: translateY(12px) scale(.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Mobile */
+
+@media (max-width: 850px) {
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a { font-size: 11px; }
+
+  .brand img { width: 105px; }
+
+  .brand-by { display: none; }
+  .brand-divider { display: none; }
+
+  .nav > .btn { padding: 10px 12px; }
+
+  .section { padding: 70px 0; }
+}
+
+@media (max-width: 650px) {
+  .container { width: min(100% - 30px, 1160px); }
+
+  .nav {
+    min-height: 68px;
+    flex-wrap: wrap;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .nav > .btn { display: none; }
+
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 5px 0 14px;
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links a {
+    padding: 12px 3px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+  }
+
+  .hero { padding: 72px 0 50px; }
+
+  .hero-logo {
+    width: 96%;
+    margin: 33px auto 27px;
+  }
+
+  .hero-description { font-size: 14px; }
+
+  .hero h1 { font-size: clamp(43px, 12vw, 65px); }
+
+  .hero-actions .btn { width: 100%; }
+
+  .stats { margin-top: 23px; }
+
+  .stat { padding: 18px 6px; }
+
+  .stat strong { font-size: 12px; }
+  .stat span { font-size: 8px; }
+
+  .section { padding: 58px 0; }
+
+  .features-grid,
+  .application-grid,
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .feature-card { min-height: auto; padding: 24px; }
+
+  .highlight { padding: 27px 23px; }
+
+  .info-card { padding: 23px; }
+
+  .footer-top { flex-direction: column; }
+
+  .footer-bottom { flex-direction: column; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reveal { opacity: 1; transform: none; }
+}
 </style>
 </head>
+
 <body>
-<header><div class="wrap nav"><a class="brand" href="#top"><img class="brand-logo" src="raccoon-logo.png" alt="Raccoon logo"><span class="brand-caption">by Anonymous Devs</span></a><nav aria-label="Main navigation"><a href="#application">Application</a><a href="#terms">Terms</a><a href="#privacy">Privacy</a><a href="#contact">Contact</a></nav><a class="nav-cta" href="https://discord.com/oauth2/authorize?client_id=1562903266256232530" target="_blank" rel="noopener">Add to Discord ↗</a></div></header>
-<div class="wrap" id="top"><section class="hero"><div class="orb one"></div><div class="orb two"></div><span class="eyebrow"><span class="dot"></span> Discord Server Companion</span><div class="hero-logo-wrap"><img class="hero-logo" src="raccoon-logo.png" alt="Raccoon, Server Companion"></div><h1 class="hero-heading">PC-Level Controls.<br><span class="gradient">Right in Your Pocket.</span></h1><p>A versatile Discord utility bot for server management, moderation tools, helpful automations, and premium customization, built by <strong>Anonymous Devs</strong>.</p><div class="actions"><a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1562903266256232530" target="_blank" rel="noopener">Invite Raccoon ↗</a><a class="btn secondary" href="https://discord.gg/yFs8AkCmpy" target="_blank" rel="noopener">Join Support Server ↗</a><a class="btn secondary" href="#application">Explore information ↓</a></div><div class="micro">Official information · Terms of Service · Privacy Policy</div></section>
-<section class="section reveal" id="application"><div class="section-head"><div class="kicker">01 / Application details</div><h2>Everything important, in one place.</h2><p class="intro">The four Discord application information categories, organized for quick access. Legal pages are available below; technical endpoints should only be configured when the corresponding feature is actually implemented.</p></div><div class="grid">
-<article class="card"><div class="num">01 / Technical endpoint</div><h3>Interactions Endpoint URL</h3><p>Used when Discord interactions are received through an HTTP endpoint instead of a bot connected through the Discord Gateway.</p><span class="pill">Gateway bot: leave blank</span></article>
-<article class="card"><div class="num">02 / Technical endpoint</div><h3>Linked Roles Verification URL</h3><p>Required only if Raccoon implements a real Discord Linked Roles verification flow to check a member's eligibility for a role.</p><span class="pill">Not implemented? Leave blank</span></article>
-<article class="card"><div class="num">03 / Legal document</div><h3>Terms of Service</h3><p>Read the conditions for using Raccoon, responsibilities for server permissions, service availability, acceptable use, and enforcement.</p><a href="#terms">Read Terms of Service →</a></article>
-<article class="card"><div class="num">04 / Legal document</div><h3>Privacy Policy</h3><p>Understand what information the bot may process, why it is used, storage and retention considerations, and how to contact the team about data.</p><a href="#privacy">Read Privacy Policy →</a></article></div><div class="note"><strong>Setup note:</strong> This website is an informational and legal page. It does not itself receive Discord interactions or perform Linked Roles verification. Keep technical endpoint fields empty until you deploy working endpoints.</div></section>
-<section class="section legal reveal" id="terms"><div class="section-head"><div class="kicker">02 / Legal</div><h2>Terms of Service</h2><p class="intro">Rules and responsibilities for using Raccoon.</p></div><article class="card"><p class="updated">Raccoon · Maintained by Anonymous Devs · Last reviewed: October 2026</p><p>By inviting, configuring, or using Raccoon (the “Bot”), you agree to these Terms of Service. If you do not agree with these terms, do not use the Bot.</p><h3>1. Acceptable use</h3><p>You must use Raccoon lawfully and in accordance with Discord’s Terms of Service, Community Guidelines, and applicable policies. Do not use the Bot to harass, threaten, spam, exploit vulnerabilities, evade platform safeguards, or violate another person’s rights.</p><h3>2. Permissions and server responsibility</h3><p>Server owners and administrators are responsible for the permissions granted to Raccoon, the settings they configure, and how moderation or management commands are used. Grant only the permissions needed for the features you want. Some features may not work without the relevant Discord permissions or role hierarchy.</p><h3>3. Availability and feature changes</h3><p>Raccoon is provided on an “as available” basis. Features may be updated, temporarily unavailable, changed, or discontinued. Anonymous Devs aims to maintain the Bot but does not guarantee uninterrupted service, availability at all times, or error-free operation.</p><h3>4. Premium features</h3><p>Some customization or management features may be limited to authorized premium users. Eligibility, access, and available features may change. Do not attempt to bypass access controls or exploit premium functionality.</p><h3>5. Abuse and access restrictions</h3><p>Access may be limited or removed if use of the Bot violates these terms, harms the service, threatens security, or creates operational risks. Server administrators remain responsible for their community rules and moderation decisions.</p><h3>6. Disclaimer and limitation</h3><p>To the extent permitted by applicable law, the Bot is provided without warranties of any kind. Anonymous Devs is not responsible for user-generated content, server decisions made by administrators, or interruptions caused by Discord, hosting providers, or other circumstances outside reasonable control.</p><h3>7. Changes to these terms</h3><p>These terms may be updated as Raccoon evolves. The latest version will be published on this page. Continued use after an update constitutes acceptance of the revised terms to the extent permitted by applicable law.</p><h3>8. Contact</h3><p>Questions about these terms can be raised in the official Raccoon support server. Please do not post bot tokens, passwords, or other secrets in public channels.</p><a class="btn secondary" href="https://discord.gg/yFs8AkCmpy" target="_blank" rel="noopener">Contact support ↗</a></article></section>
-<section class="section legal reveal" id="privacy"><div class="section-head"><div class="kicker">03 / Legal</div><h2>Privacy Policy</h2><p class="intro">How information may be handled when Raccoon is used on Discord.</p></div><article class="card"><p class="updated">Raccoon · Maintained by Anonymous Devs · Last reviewed: October 2026</p><p>This Privacy Policy describes the kinds of information Raccoon may process to provide its features. The final policy should match the Bot’s actual code, database, logs, hosting setup, and retention practices.</p><h3>1. Information the Bot may process</h3><p>Depending on the commands and features used, Raccoon may process Discord user IDs, server IDs, channel IDs, command inputs, server configuration, moderation actions, reminders, AFK preferences, premium access status, and operational logs. The precise information depends on which features are enabled and how they are implemented.</p><h3>2. How information is used</h3><p>Information may be used to respond to commands, provide server-management and moderation utilities, save server settings, manage authorized access, deliver configured features, troubleshoot errors, prevent abuse, and maintain service security.</p><h3>3. Storage and retention</h3><p>Information may be stored in configuration files, databases, or operational logs depending on the deployment. Retention periods and deletion methods depend on the actual implementation. Anonymous Devs should publish specific retention periods and deletion procedures once they have been verified against the live system.</p><h3>4. Sharing and service providers</h3><p>Information may be processed by hosting, database, or infrastructure providers needed to operate the Bot, or disclosed when required by law. Anonymous Devs does not intend to sell personal information. Only data necessary for operating and supporting the Bot should be accessed or shared.</p><h3>5. Security</h3><p>Reasonable safeguards should be used to protect information, but no online service can guarantee absolute security. Never send passwords, Discord tokens, private keys, or other credentials to the Bot or support team.</p><h3>6. Your choices and data requests</h3><p>For questions or requests about information associated with your Discord account or server, contact Anonymous Devs through the official support server. Provide enough context to identify the relevant feature or server, but do not share credentials. Requests will be handled according to applicable law and the Bot’s actual capabilities.</p><h3>7. Children’s privacy</h3><p>Raccoon is a Discord community tool and is not intended to bypass Discord’s age requirements or applicable child privacy protections.</p><h3>8. Policy updates</h3><p>This policy may change when the Bot’s features or data practices change. The latest version will be available on this page.</p><a class="btn secondary" href="https://discord.gg/yFs8AkCmpy" target="_blank" rel="noopener">Ask a privacy question ↗</a></article><div class="note"><strong>Important:</strong> Before publishing this page as a final legal policy, verify the actual data collected, storage location, retention periods, and deletion process in Raccoon’s code and hosting environment. This template is not legal advice.</div></section>
-<section class="section reveal" id="contact"><div class="section-head"><div class="kicker">04 / Connect</div><h2>Need a hand?</h2><p class="intro">Reach Raccoon and its creator through the official links below.</p></div><div class="contact-grid"><div class="contact"><strong>Invite Raccoon</strong><span>Add the bot to your Discord server.</span><a href="https://discord.com/oauth2/authorize?client_id=1562903266256232530" target="_blank" rel="noopener">Add to Discord ↗</a></div><div class="contact"><strong>Support server</strong><span>Get help, share feedback, and follow updates.</span><a href="https://discord.gg/yFs8AkCmpy" target="_blank" rel="noopener">Join support ↗</a></div><div class="contact"><strong>Owner contact</strong><span>Contact the bot owner through Instagram.</span><a href="https://www.instagram.com/its_rish.i?obrf=aTRlZDJ2cjI3Nnh2" target="_blank" rel="noopener">Instagram ↗</a></div></div></section>
-</div><footer><div class="wrap foot"><span>© <span id="year"></span> Anonymous Devs. Raccoon is an independent community project.</span><span><a href="#terms">Terms</a><a href="#privacy">Privacy</a><a href="#top">Back to top ↑</a></span></div></footer>
-<script>document.getElementById('year').textContent=new Date().getFullYear();const items=document.querySelectorAll('.reveal');if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.08});items.forEach(el=>observer.observe(el))}else{items.forEach(el=>el.classList.add('visible'))}</script>
-</body></html>
+
+<div class="announcement">
+  Built for communities. <span>Designed for control.</span> &nbsp; · &nbsp; By Anonymous Devs
+</div>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Raccoon home">
+      <img src="raccoon-logo.png" alt="Raccoon logo">
+      <span class="brand-divider"></span>
+      <span class="brand-by">Created by<strong>Anonymous Devs</strong></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+      <a href="#features">Features</a>
+      <a href="#application">Developer Info</a>
+      <a href="#terms">Terms</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1562903266256232530" target="_blank" rel="noopener noreferrer">
+      Add to Discord ↗
+    </a>
+  </div>
+</header>
+
+<main id="home">
+
+  <!-- HERO -->
+
+  <section class="hero">
+    <div class="hero-glow"></div>
+
+    <div class="container hero-content">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        YOUR DISCORD SERVER COMPANION
+      </div>
+
+      <img class="hero-logo" src="raccoon-logo.png" alt="Raccoon, your Discord server companion">
+
+      <h1>
+        Your server.
+        <span class="second-line">Your rules.</span>
+      </h1>
+
+      <p class="hero-description">
+        Meet <strong>Raccoon</strong>, your all-in-one Discord server companion.
+        Manage your community, simplify everyday tasks and make your server
+        feel more like your own.
+        <strong>Built by Anonymous Devs.</strong>
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1562903266256232530" target="_blank" rel="noopener noreferrer">
+          ↗ &nbsp; Invite Raccoon
+        </a>
+        <a class="btn btn-outline" href="https://discord.gg/yFs8AkCmpy" target="_blank" rel="noopener noreferrer">
+          Join our community &nbsp; ↗
+        </a>
+      </div>
+
+      <p class="hero-note">
+        <span>✳</span> PC-Level Controls, Right in Your Pocket.
+      </p>
+
+      <div class="stats">
+        <div class="stat">
+          <strong>Server Manager</strong>
+          <span>One companion</span>
+        </div>
+        <div class="stat">
+          <strong>Made for Discord</strong>
+          <span>Community first</span>
+        </div>
+        <div class="stat">
+          <strong>Anonymous Devs</strong>
+          <span>Built with care</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+
+  <section class="section" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">01 / What Raccoon does</div>
+        <h2>Less busywork.<br><span class="green">More community.</span></h2>
+        <p>
+          The tools your server needs, organized around making everyday
+          management simpler. Available features depend on the current bot version
+          and your server permissions.
+        </p>
+      </div>
+
+      <div class="features-grid">
+
+        <article class="feature-card reveal">
+          <div class="feature-top">
+            <div class="feature-icon">⌘</div>
+            <span class="feature-number">FEATURE / 01</span>
+          </div>
+          <h3>Server Management</h3>
+          <p>
+            Keep your server organized with management tools, configurable
+            settings and useful controls designed for server administrators.
+          </p>
+          <span class="feature-label">Manage with confidence</span>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-top">
+            <div class="feature-icon">◈</div>
+            <span class="feature-number">FEATURE / 02</span>
+          </div>
+          <h3>Moderation Tools</h3>
+          <p>
+            Handle common moderation tasks with command-based controls.
+            Use the correct Discord permissions and role hierarchy for each action.
+          </p>
+          <span class="feature-label">Tools for moderators</span>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-top">
+            <div class="feature-icon">⟳</div>
+            <span class="feature-number">FEATURE / 03</span>
+          </div>
+          <h3>Helpful Automation</h3>
+          <p>
+            Reduce repetitive work with supported server utilities and
+            configurable features that help keep your community running smoothly.
+          </p>
+          <span class="feature-label">Make routine work easier</span>
+        </article>
+
+        <article class="feature-card reveal">
+          <div class="feature-top">
+            <div class="feature-icon">✳</div>
+            <span class="feature-number">FEATURE / 04</span>
+          </div>
+          <h3>Personalization</h3>
+          <p>
+            Give your bot experience its own identity with supported
+            customization options and eligible premium features.
+          </p>
+          <span class="feature-label">Make it yours</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CALLOUT -->
+
+  <section class="container reveal">
+    <div class="highlight">
+      <div class="tag">Made for your community</div>
+      <h2>Big control. Clean experience.<br><span class="green">One Raccoon.</span></h2>
+      <p>
+        Whether you're building a small community or managing a busy server,
+        Raccoon is designed to keep useful server tools within reach.
+        Invite the bot and explore the features available to your server.
+      </p>
+      <a class="btn btn-primary" href="https://discord.com/oauth2/authorize?client_id=1562903266256232530" target="_blank" rel="noopener noreferrer">
+        Get Raccoon on Discord ↗
+      </a>
+    </div>
+  </section>
+
+  <!-- DEVELOPER PORTAL INFO -->
+
+  <section class="section" id="application">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">02 / Discord developer information</div>
+        <h2>Everything important.<br><span class="green">All in one place.</span></h2>
+        <p>
+          Technical endpoint information and the policies for using Raccoon.
+          These details are provided for Discord application configuration.
+        </p>
+      </div>
+
+      <div class="application-grid">
+
+        <article class="info-card reveal">
+          <div class="index">01 / TECHNICAL CONFIGURATION</div>
+          <h3>Interactions Endpoint URL</h3>
+          <p>
+            This URL is used when an application receives Discord interactions
+            through an HTTP endpoint instead of handling them through a
+            Gateway connection.
+          </p>
+          <span class="info-status">Gateway-based bot: leave blank</span>
+        </article>
+
+        <article class="info-card reveal">
+          <div class="index">02 / TECHNICAL CONFIGURATION</div>
+          <h3>Linked Roles Verification URL</h3>
+          <p>
+            A verification endpoint is needed only when the application
+            implements Discord Linked Roles and a working verification flow.
+          </p>
+          <span class="info-status">Leave blank until implemented</span>
+        </article>
+
+        <article class="info-card reveal">
+          <div class="index">03 / LEGAL DOCUMENT</div>
+          <h3>Terms of Service</h3>
+          <p>
+            Review acceptable use, server administrator responsibilities,
+            feature availability, premium access and service limitations.
+          </p>
+          <a class="text-link" href="#terms">Read Terms of Service ↗</a>
+        </article>
+
+        <article class="info-card reveal">
+          <div class="index">04 / LEGAL DOCUMENT</div>
+          <h3>Privacy Policy</h3>
+          <p>
+            Learn about the types of information the bot may process,
+            why it may be needed and how to contact the team with questions.
+          </p>
+          <a class="text-link" href="#privacy">Read Privacy Policy ↗</a>
+        </article>
+
+      </div>
+
+      <div class="notice reveal">
+        <strong>Important:</strong> This is an informational website.
+        It does not implement a Discord interactions endpoint or Linked Roles
+        verification service. Do not enter this website's URL into those
+        technical fields unless the required backend functionality is actually
+        implemented and deployed.
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMS -->
+
+  <section class="section" id="terms">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">03 / Legal</div>
+        <h2>Terms of <span class="green">Service.</span></h2>
+        <p>
+          The conditions that apply when you invite, configure or use Raccoon.
+        </p>
+      </div>
+
+      <div class="legal-wrap reveal">
+        <div class="legal-content">
+          <div class="legal-meta">
+            <span>Raccoon</span>
+            <span>Anonymous Devs</span>
+            <span>Review before publication</span>
+          </div>
+
+          <p class="legal-intro">
+            By inviting, configuring or using Raccoon (the "Bot"), you agree
+            to these Terms of Service. If you do not agree, discontinue use
+            of the Bot.
+          </p>
+
+          <h3>1. Acceptable Use</h3>
+          <p>
+            You must use Raccoon in accordance with applicable laws,
+            Discord's Terms of Service, Community Guidelines and relevant
+            platform policies. Do not use the Bot to harass others, distribute
+            spam, exploit vulnerabilities, evade platform safeguards or
+            infringe another person's rights.
+          </p>
+
+          <h3>2. Server Permissions and Responsibilities</h3>
+          <p>
+            Server owners and administrators are responsible for the
+            permissions granted to Raccoon, the settings they configure and
+            how they use its commands. Only grant permissions necessary for
+            your intended use. Some commands require appropriate Discord
+            permissions, access to a channel or a suitable role hierarchy.
+          </p>
+
+          <h3>3. Availability and Changes</h3>
+          <p>
+            Raccoon is provided on an as-available basis. Features may be
+            updated, changed, temporarily interrupted or discontinued.
+            Anonymous Devs does not guarantee uninterrupted availability
+            or that every feature will always operate without errors.
+          </p>
+
+          <h3>4. Premium Features</h3>
+          <p>
+            Certain features may be available only to users who meet the
+            applicable premium eligibility requirements. Users must not
+            attempt to bypass access restrictions, misuse premium access
+            or exploit the Bot's functionality.
+          </p>
+
+          <h3>5. Abuse and Restrictions</h3>
+          <p>
+            Access may be restricted where necessary to address abuse,
+            security risks, service disruption or violations of these terms.
+            Server administrators remain responsible for their communities,
+            their rules and their moderation decisions.
+          </p>
+
+          <h3>6. Third-Party Services</h3>
+          <p>
+            Raccoon relies on Discord and may rely on hosting or other
+            infrastructure providers. Their services are subject to their
+            own terms, policies, availability and technical limitations.
+            Anonymous Devs does not control independent third-party services.
+          </p>
+
+          <h3>7. Disclaimer and Limitation</h3>
+          <p>
+            To the extent permitted by applicable law, Raccoon is provided
+            without warranties of any kind. Anonymous Devs is not responsible
+            for user-generated content, administrator decisions or
+            interruptions caused by Discord, hosting providers or events
+            outside its reasonable control.
+          </p>
+
+          <h3>8. Updates to These Terms</h3>
+          <p>
+            These terms may be revised as the Bot evolves. The current version
+            will be published on this page. Continued use after changes take
+            effect constitutes acceptance to the extent permitted by applicable law.
+          </p>
+
+          <h3>9. Contact</h3>
+          <p>
+            For questions about these terms, contact the team through the
+            official support server. Do not share bot tokens, passwords or
+            other confidential credentials in public channels.
+          </p>
+
+          <div class="legal-contact">
+            <a class="btn btn-outline" href="https://discord.gg/yFs8AkCmpy" target="_blank" rel="noopener noreferrer">
+              Contact Raccoon Support ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRIVACY -->
+
+  <section class="section" id="privacy">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">04 / Legal</div>
+        <h2>Your data.<br><span class="green">Your privacy.</span></h2>
+        <p>
+          Information about how data may be handled when using Raccoon.
+          The published policy must match the bot's real implementation.
+        </p>
+      </div>
+
+      <div class="legal-wrap reveal">
+        <div class="legal-content">
+          <div class="legal-meta">
+            <span>Privacy Policy</span>
+            <span>Anonymous Devs</span>
+            <span>Review before publication</span>
+          </div>
+
+          <p class="legal-intro">
+            This Privacy Policy describes categories of information that
+            Raccoon may process to provide its features. Actual data practices
+            depend on the bot's code, configuration, database and hosting setup.
+          </p>
+
+          <h3>1. Information That May Be Processed</h3>
+          <p>
+            Depending on the features enabled, Raccoon may process Discord
+            user IDs, server IDs, channel IDs, command inputs, server settings,
+            moderation-related records, reminders, AFK preferences, premium
+            access status and operational logs.
+          </p>
+          <p>
+            These are possible categories, not a guarantee that every category
+            is collected. The final policy should list only information the
+            deployed bot actually processes.
+          </p>
+
+          <h3>2. How Information May Be Used</h3>
+          <ul>
+            <li>Responding to commands and providing requested features.</li>
+            <li>Saving and applying server configuration.</li>
+            <li>Supporting moderation and management utilities.</li>
+            <li>Managing authorized access and premium eligibility.</li>
+            <li>Diagnosing errors, maintaining reliability and preventing abuse.</li>
+          </ul>
+
+          <h3>3. Storage and Retention</h3>
+          <p>
+            Depending on the implementation, information may be held in
+            configuration files, a database or operational logs. The actual
+            storage location, retention periods and deletion procedures should
+            be documented based on the live deployment. Do not publish
+            unverified retention promises.
+          </p>
+
+          <h3>4. Sharing and Service Providers</h3>
+          <p>
+            Information may be processed by infrastructure providers required
+            to operate the Bot, or disclosed when required by law. The operator
+            should verify which providers can access data and explain those
+            arrangements accurately. Anonymous Devs does not intend to sell
+            personal information.
+          </p>
+
+          <h3>5. Security</h3>
+          <p>
+            Reasonable safeguards should be used to protect stored information.
+            However, no online service can guarantee absolute security.
+            Never provide passwords, Discord tokens, private keys or other
+            credentials through bot commands or support messages.
+          </p>
+
+          <h3>6. Your Choices and Data Requests</h3>
+          <p>
+            For questions or requests concerning information associated with
+            your account or server, contact Anonymous Devs through the official
+            support server. Provide enough context to identify the relevant
+            feature without sharing confidential credentials. Requests will
+            be handled according to applicable law and the bot's actual capabilities.
+          </p>
+
+          <h3>7. Children's Privacy</h3>
+          <p>
+            Raccoon is a Discord community tool. It is not designed to bypass
+            Discord's age requirements or applicable privacy protections.
+          </p>
+
+          <h3>8. Changes to This Policy</h3>
+          <p>
+            This policy may be updated when Raccoon's features or data
+            practices change. The latest version should be published on this page.
+          </p>
+
+          <div class="legal-contact">
+            <a class="btn btn-outline" href="https://discord.gg/yFs8AkCmpy" target="_blank" rel="noopener noreferrer">
+              Ask a Privacy Question ↗
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="notice reveal">
+        <strong>Before publishing:</strong> Check Raccoon's source code,
+        database, logs, hosting provider and deletion process. Replace any
+        generic wording with verified details. This template is not legal advice.
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">05 / Frequently asked questions</div>
+        <h2>Quick answers.<br><span class="green">No confusion.</span></h2>
+        <p>Some useful information before you get started with Raccoon.</p>
+      </div>
+
+      <div class="faq-list reveal">
+
+        <details class="faq-item">
+          <summary>How do I add Raccoon to my server?</summary>
+          <div class="faq-answer">
+            Use the Invite Raccoon button on this page. Discord will show
+            the authorization screen so you can choose a server and review
+            the requested permissions.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where can I get support?</summary>
+          <div class="faq-answer">
+            Join the official Raccoon support server using the community
+            links on this page. You can ask questions, report issues and
+            share feedback there.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Why does a command sometimes fail?</summary>
+          <div class="faq-answer">
+            A command may require specific permissions, a suitable role
+            hierarchy, access to a channel or a supported configuration.
+            Check the command's response and your server settings.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Does this website handle Discord interactions?</summary>
+          <div class="faq-answer">
+            No. This is a static informational website. Discord interaction
+            endpoints and Linked Roles verification require their own
+            correctly implemented backend services.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Where can I read the policies?</summary>
+          <div class="faq-answer">
+            The Terms of Service and Privacy Policy are available directly
+            on this page. Review them before using the Bot.
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="kicker">06 / Stay connected</div>
+        <h2>Let's build better<br><span class="green">communities.</span></h2>
+        <p>
+          Need help with Raccoon or want to share feedback?
+          Reach out through the official links.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+
+        <article class="contact-card reveal">
+          <div class="contact-icon">↗</div>
+          <h3>Invite Raccoon</h3>
+          <p>Bring your new server companion into your Discord community.</p>
+          <a href="https://discord.com/oauth2/authorize?client_id=1562903266256232530" target="_blank" rel="noopener noreferrer">
+            ADD TO DISCORD ↗
+          </a>
+        </article>
+
+        <article class="contact-card reveal">
+          <div class="contact-icon">⌘</div>
+          <h3>Support Server</h3>
+          <p>Ask questions, share feedback and connect with the community.</p>
+          <a href="https://discord.gg/yFs8AkCmpy" target="_blank" rel="noopener noreferrer">
+            JOIN COMMUNITY ↗
+          </a>
+        </article>
+
+        <article class="contact-card reveal">
+          <div class="contact-icon">◎</div>
+          <h3>Owner Contact</h3>
+          <p>Connect with the creator through the linked Instagram profile.</p>
+          <a href="https://www.instagram.com/its_rish.i?obrf=aTRlZDJ2cjI3Nnh2" target="_blank" rel="noopener noreferrer">
+            OPEN INSTAGRAM ↗
+          </a>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#home">
+          <img src="raccoon-logo.png" alt="Raccoon logo">
+        </a>
+        <p>
+          PC-Level Controls, Right in Your Pocket.<br>
+          Your Discord server companion by Anonymous Devs.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#features">Features</a>
+        <a href="#application">Developer Info</a>
+        <a href="#terms">Terms of Service</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://discord.gg/yFs8AkCmpy" target="_blank" rel="noopener noreferrer">Support ↗</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© <span id="year"></span> Anonymous Devs. All rights reserved.</span>
+      <span>Raccoon is an independent community project.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Current year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile navigation
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
+
+  menuToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", String(isOpen));
+    menuToggle.textContent = isOpen ? "×" : "☰";
+  });
+
+  // Close mobile navigation after selecting a link
+  navLinks.querySelectorAll("a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      menuToggle.textContent = "☰";
+    });
+  });
+
+  // Reveal sections as they enter the screen
+  const revealElements = document.querySelectorAll(".reveal");
+
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    revealElements.forEach(element => observer.observe(element));
+  } else {
+    revealElements.forEach(element => element.classList.add("visible"));
+  }
+</script>
+
+</body>
+</html>
